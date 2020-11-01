@@ -13,7 +13,7 @@ h2 {
 
 h3 {
     text-align: center;
-    margin: 1%;
+    margin: 0.5%;
 }
 
 .ex_border {
@@ -48,10 +48,10 @@ td {
 }
 
 #triangle {
-    margin: auto;
     width: 0;
     border-bottom: 180px solid #4db02f;
     border-right: 180px solid transparent;
+    margin: auto auto 1%;
 }
 
 #calculate {
