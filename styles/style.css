@@ -1,0 +1,48 @@
+* {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+body {
+    font-size: 1em;
+}
+
+h2 {
+    color: #156375;
+}
+
+input {
+    font-size: 1em;
+}
+
+.app {
+    margin: auto;
+    border: 3px solid #0a183b;
+    padding: 15px;
+    width: auto;
+    display: inline-block;
+}
+
+.answer {
+    text-align: center;
+    color: #2d8ca0;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+button {
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    border: 3px solid #0a183b;
+    border-radius: 4px;
+    margin-top: 14px;
+    margin-left: 28%;
+    transition-duration: 0.4s;
+    padding: 8px 12px;
+}
+
+button:hover {
+    background-color: #2d8ca0;
+    color: white;
+}
