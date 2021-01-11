@@ -58,6 +58,10 @@
         service.deleteCarFromList = function (index) {
             carsList.splice(index, 1);
         }
+
+        service.hideCarFromList=function (index){
+            console.log("hide: "+index);
+        }
     };
 
 })();

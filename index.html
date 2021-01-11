@@ -14,9 +14,9 @@
     <h3>Каталог автомобілів</h3>
 
     <ol>
-        <li ng-repeat="car in carsList.carsList">
+        <li ng-repeat="car in carsList.carsList" ng-hide="selected.index === $index" >
             наявно {{car.quantity}} автомобілів марки "{{car.mark}}"
-            <button ng-hide="">Приховати</button>
+            <button ng-click="selected.index = $index">Приховати</button>
             <button ng-click="carsList.deleteCarFromList($index);">Видалити</button>
         </li>
     </ol>
