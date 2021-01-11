@@ -10,6 +10,8 @@
     function CarsListController(CarsListService) {
         const cars=this;
 
+        cars.hideIndex=-1;
+
         cars.carsList=CarsListService.getCarsList();
 
         cars.deleteCarFromList=function (index){

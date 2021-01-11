@@ -6,7 +6,7 @@
     <script src="js/app.js"></script>
 <!--    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="styles/style.css">
-    <title>Title</title>
+    <title>Екзаменаційна робота</title>
 </head>
 <body>
 
@@ -14,9 +14,9 @@
     <h3>Каталог автомобілів</h3>
 
     <ol>
-        <li ng-repeat="car in carsList.carsList" ng-hide="selected.index === $index" >
+        <li ng-repeat="car in carsList.carsList" ng-hide="hideIndex === $index" >
             наявно {{car.quantity}} автомобілів марки "{{car.mark}}"
-            <button ng-click="selected.index = $index">Приховати</button>
+            <button ng-click="hideIndex = $index">Приховати</button>
             <button ng-click="carsList.deleteCarFromList($index);">Видалити</button>
         </li>
     </ol>
