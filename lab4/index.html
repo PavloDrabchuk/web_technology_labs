@@ -1,0 +1,45 @@
+<!--<!DOCTYPE html>-->
+<html ng-app="ShoppingApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Лабораторна робота №4</title>
+</head>
+<body>
+<h2>Застосунок для викреслення зроблених покупок з списку</h2>
+<div class="mainBlock">
+    <div ng-controller="ToBuyListController as toBuyList"
+         class="listBlock"
+         id="toBuyBlock">
+        <h3>Купити</h3>
+        <div ng-if="!toBuyList.toBuyList.length"
+             class="message">
+            {{toBuyList.emptyToBuyListMessage}}
+        </div>
+        <ul>
+            <li ng-repeat="item in toBuyList.toBuyList">
+                Купити {{item.quantity}} {{item.name}}
+                <button ng-click="toBuyList.addToBoughtList($index);">Куплено</button>
+            </li>
+        </ul>
+    </div>
+    <div ng-controller="BoughtListController as boughtList"
+         class="listBlock"
+         id="boughtBlock">
+        <h3>Куплено</h3>
+        <div ng-if="!boughtList.boughtList.length"
+             class="message">
+            {{boughtList.emptyBoughtListMessage}}
+        </div>
+        <ul>
+            <li ng-repeat="item in boughtList.boughtList">
+                Куплено {{item.quantity}} {{item.name}}
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
